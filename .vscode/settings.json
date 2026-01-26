@@ -2,10 +2,11 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": [],
+  "cSpell.words": ["certbot", "Diffie"],
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
   },
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "hediet.vscode-drawio.appearance": "automatic"
 }
