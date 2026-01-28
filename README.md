@@ -28,3 +28,16 @@ Install required softwares ([Docker](https://www.docker.com/get-started/) & [Vis
 ## Build
 
 Run `npm run build` to build the docker image.
+
+## Environment Variables
+
+| Variable Name    | Required | Default        | Description                                                                                                          |
+| :--------------- | :------: | :------------- | :------------------------------------------------------------------------------------------------------------------- |
+| CB_EMAIL         |   True   |                | Email required by certbot for account registration and for contacting in case of any issue.                          |
+| CB_DOMAINs       |   True   |                | Space separated CB_DOMAINs that are needed to be registered **(No wildcards)**                                       |
+| CB_CRON_PATTERN  |  False   | 30 20 \* \* \* | Certbot renewal cronjob to renew due certificates.                                                                   |
+| TEST             |  False   | 0              | Provide 1 (instead of 0) for test mode. Sets --staging (in case of domain challenge) & --dry-run (in case of renew). |
+| SERVER_PUBLIC_IP |   True   | _blank_        | Server's public IP where container is container is deployed.                                                         |
+| VPN_ENDPOINT     |   True   | _blank_        | VPN Endpoint.                                                                                                        |
+| VPN_PORT         |  False   | 51820          | 51820 default WireGuard port. Change if a different port is mapped on host.                                          |
+| SSL_DH_SIZE      |  False   | 2048           | DH param size. File is generated on first run                                                                        |
