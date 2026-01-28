@@ -36,9 +36,6 @@ ENV SSL_DH_SIZE=2048
 # Open janus directory
 VOLUME /etc/openjanus
 
-# Openresty first run state
-VOLUME /var/lib/openjanus
-
 # Certificate storage
 VOLUME /etc/letsencrypt
 
