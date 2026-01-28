@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #303030;
+}
+
+a {
+  @apply py-2.5 w-fit px-5 me-2 mb-2 mt-8 text-sm font-medium text-neutral-900 focus:outline-none bg-white rounded-lg border border-neutral-200 hover:bg-neutral-100 hover:text-neutral-700 focus:z-10 focus:ring-4 focus:ring-neutral-100 dark:focus:ring-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 dark:border-neutral-600 dark:hover:text-white dark:hover:bg-neutral-700;
+}
+
+.container {
+  @apply lg:min-h-screen min-w-screen flex justify-center flex-col p-8 sm:px-24;
+}
+
+.container > h1 {
+  @apply text-4xl sm:text-5xl lg:text-8xl font-bold mb-12;
+}
+
+.container > p {
+  @apply text-sm;
+}
+
+body {
+  @apply dark:bg-neutral-800 dark:text-white;
+}

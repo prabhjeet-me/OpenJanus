@@ -2,11 +2,37 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": ["certbot", "Diffie"],
+  "cSpell.words": [
+    "Anson",
+    "buildx",
+    "certbot",
+    "Diffie",
+    "eamodio",
+    "Eleventy",
+    "esbenp",
+    "fastcgi",
+    "ginfuru",
+    "hediet",
+    "keepalive",
+    "letsencrypt",
+    "libqrencode",
+    "mhutchie",
+    "nginxlog",
+    "nopush",
+    "nunjucks",
+    "openjanus",
+    "pkief",
+    "referer",
+    "scgi",
+    "sendfile",
+    "stylesheet",
+    "uwsgi"
+  ],
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
   },
   "explorer.compactFolders": false,
-  "hediet.vscode-drawio.appearance": "automatic"
+  "hediet.vscode-drawio.appearance": "automatic",
+  "css.customData": [".vscode/tailwind.json"]
 }

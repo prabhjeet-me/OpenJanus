@@ -1,0 +1,34 @@
+{
+  "name": "openjanus",
+  "version": "0.0.0",
+  "description": "An open-source, containerized infrastructure stack combining OpenResty, automatic SSL, and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead.",
+  "main": "server.js",
+  "type": "module",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "tailwind:watch": "npx @tailwindcss/cli -m -i ./pages/tailwindcss/input.css -o ./container/html/_assets/css/index.css --watch",
+    "eleventy:watch": "eleventy --serve",
+    "prettier:watch": "onchange \"container/html**/*.html\" -- prettier --write --ignore-unknown {{changed}}",
+    "serve": "concurrently \"npm:eleventy:watch\" \"npm:tailwind:watch\" \"npm:prettier:watch\"",
+    "serveStatic": "npm run build:pages && node server.js",
+    "build:pages": "eleventy && npx @tailwindcss/cli -m -i ./pages/tailwindcss/input.css -o ./container/html/_assets/css/index.css && prettier --write --ignore-unknown container/html/**/*.html",
+    "build": "npm run build:pages && ./scripts/build.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "concurrently": "^9.2.1",
+    "express": "^5.1.0",
+    "onchange": "^7.1.0",
+    "prettier": "^3.6.2"
+  }
+}
