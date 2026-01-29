@@ -1,0 +1,392 @@
+<mxfile host="65bd71144e">
+    <diagram id="1OtigwTmSooVuUhs4Gp0" name="Page-1">
+        <mxGraphModel dx="1273" dy="1286" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="147" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="-150" width="990" height="780" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="group;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="850" y="250" width="190" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#FF8000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="51" vertex="1">
+                    <mxGeometry y="14" width="190" height="186" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&lt;font style=&quot;color: rgb(255, 128, 0);&quot;&gt;Ports&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="51" vertex="1">
+                    <mxGeometry x="8.060000000000002" width="51.94" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&lt;b&gt;80&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="51" vertex="1">
+                    <mxGeometry x="16.329999999999984" y="40" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;b&gt;443&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="51" vertex="1">
+                    <mxGeometry x="16.329999999999984" y="90" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;b&gt;VPN_PORT&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="51" vertex="1">
+                    <mxGeometry x="16.329999999999984" y="139" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#B266FF,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="389" y="-121" width="321" height="296" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font style=&quot;color: rgb(178, 102, 255);&quot;&gt;Certbot Client&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="403" y="-135" width="106" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="group;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="409" y="-95" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="53" vertex="1">
+                    <mxGeometry width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Initial Registration&lt;/h1&gt;&lt;p&gt;Based on file .first_run_done, initial registration is done with provided email (CB_EMAIL)&amp;nbsp;and list of CB_DOMAINs.&amp;nbsp;&lt;/p&gt;&lt;p&gt;LetsEncrypt server is determined using CB_TESTING env. var.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="53" vertex="1">
+                    <mxGeometry x="10" width="250" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="group;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="409" y="65" width="280" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="54" vertex="1">
+                    <mxGeometry width="280" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Auto Renewal&lt;/h1&gt;&lt;p&gt;Runs a cronjob to renew due certificates. Pattern is defined in variables.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="54" vertex="1">
+                    <mxGeometry x="10" width="250" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#B266FF,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="394" width="220" height="186" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="&lt;font style=&quot;color: rgb(178, 102, 255);&quot;&gt;WireGuard&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="124" y="380" width="86" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;VPN&lt;/h1&gt;&lt;p&gt;Automatically configures routing and register peers provided via environment variables. Generates QR code on cli for easy configuration on devices&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="124" y="420" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="" style="group;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="110" y="-134" width="190" height="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#3399FF,#FFFFFF);container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry y="14" width="190" height="476" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;font style=&quot;color: rgb(51, 153, 255);&quot;&gt;Environment Vars&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="8.060000000000002" width="141.94" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;b&gt;CB_EMAIL&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.33" y="40" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;b&gt;CB_DOMAINs&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.33" y="90" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;b&gt;CB_RENEW_PATTERN&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.33" y="139" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;b&gt;TEST&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.33" y="190" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;b&gt;SSL_DH_SIZE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.340000000000003" y="240" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;b&gt;SERVER_PUBLIC_IP&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.33" y="290" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;b&gt;VPN_ENDPOINT&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.329999999999984" y="340" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;b&gt;VPN_PORT&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.33999999999999" y="390" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;b&gt;WG_PEERS&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                    <mxGeometry x="16.32999999999997" y="440" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#B266FF,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="389" y="204" width="330" height="376" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;font style=&quot;color: rgb(178, 102, 255);&quot;&gt;OpenResty (extended Nginx)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="404" y="190" width="206" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="89" target="95" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="780" y="281"/>
+                            <mxPoint x="780" y="176"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="136" value="Writes DH param file" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="135" vertex="1" connectable="0">
+                    <mxGeometry x="-0.5903" y="1" relative="1" as="geometry">
+                        <mxPoint x="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="89" value="1. Preconfigured security&amp;nbsp;&lt;div&gt;headers (overridable)&lt;div&gt;2. Custom error pages&lt;/div&gt;&lt;div&gt;3. Preconfigured SSL configs&lt;/div&gt;&lt;div&gt;4. DH param security&lt;/div&gt;&lt;div&gt;5. Extends nginx configs &amp;amp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;streams&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#CCCC00,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.37,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="403" y="234" width="190" height="186" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="&lt;font style=&quot;color: rgb(204, 204, 0);&quot;&gt;http block&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="411.06" y="220" width="81.94" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#00CC00,#FFFFFF);container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="-121" width="190" height="336" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="" style="group;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="858.06" y="-135" width="165.5999999999999" height="331" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;font style=&quot;color: rgb(0, 204, 0);&quot;&gt;Volumes&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                    <mxGeometry width="71.94" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;b&gt;/data/letscrypt/conf&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                    <mxGeometry x="8.269999999999982" y="40" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;b&gt;/var/lib/openjanus/state&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                    <mxGeometry x="8.269999999999982" y="90" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;b&gt;/etc/openjanus/configs&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                    <mxGeometry x="8.269999999999982" y="139" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;b&gt;/etc/openjanus/streams&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                    <mxGeometry x="8.269999999999982" y="190" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;b&gt;/etc/wireguard&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                    <mxGeometry x="8.269999999999982" y="240" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="&lt;b&gt;/etc/ssl/certs/dhparam&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                    <mxGeometry x="8.269999999999982" y="291" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.37;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="6" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="740" y="-60"/>
+                            <mxPoint x="740" y="-80"/>
+                            <mxPoint x="810" y="-80"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="103" value="Stores certificates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="99" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0469" y="1" relative="1" as="geometry">
+                        <mxPoint x="33" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="100" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="6" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="Writes .first_run_done" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="100" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4653" y="-1" relative="1" as="geometry">
+                        <mxPoint x="56" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="101" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="730" y="-60" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="730" y="88"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="105" value="After renewal" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=-90;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="101" vertex="1" connectable="0">
+                    <mxGeometry x="0.144" relative="1" as="geometry">
+                        <mxPoint y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="111" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.151;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="18" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.433;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="19" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.379;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="20" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="310" y="25"/>
+                            <mxPoint x="310" y="60"/>
+                            <mxPoint x="340" y="60"/>
+                            <mxPoint x="380" y="60"/>
+                            <mxPoint x="380" y="100"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="114" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.125;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="19" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="320" y="-24"/>
+                            <mxPoint x="320" y="50"/>
+                            <mxPoint x="380" y="50"/>
+                            <mxPoint x="450" y="50"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="115" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.581;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="21" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="340" y="76"/>
+                            <mxPoint x="340" y="-14"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="116" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="21" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="350" y="76"/>
+                            <mxPoint x="350" y="110"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="117" style="edgeStyle=none;html=1;entryX=0.004;entryY=0.077;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="22" target="89" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="330" y="130"/>
+                            <mxPoint x="380" y="130"/>
+                            <mxPoint x="380" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="118" value="Generates DH Param" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=90;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="117" vertex="1" connectable="0">
+                    <mxGeometry x="-0.7497" y="-1" relative="1" as="geometry">
+                        <mxPoint x="66" y="60" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="120" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.858;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="46" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="370" y="166"/>
+                            <mxPoint x="370" y="554"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="121" value="Used to generate WireGuard Client configs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=90;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="120" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2074" y="-2" relative="1" as="geometry">
+                        <mxPoint x="2" y="72" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="122" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1.008;entryY=0.786;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="47" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="350" y="226"/>
+                            <mxPoint x="350" y="540"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" value="Used to generated WireGuard Client configs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=90;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="122" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1319" y="1" relative="1" as="geometry">
+                        <mxPoint y="27" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="124" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="48" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="330" y="276"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="126" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.936;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="69" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="316" y="326"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="129" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#FF3333,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="437" width="190" height="136" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="&lt;font style=&quot;color: rgb(255, 51, 51);&quot;&gt;Directories&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="408.06" y="423" width="81.94" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="&lt;b&gt;/etc/nginx/conf.d&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="416.33" y="463" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="&lt;b&gt;/etc/nginx/stream.d&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="416.33" y="513" width="157.33" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="65" target="94" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="275" y="600"/>
+                            <mxPoint x="800" y="600"/>
+                            <mxPoint x="800" y="125"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="139" value="Writes configuration (like peer info)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="138" vertex="1" connectable="0">
+                    <mxGeometry x="-0.6059" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="141" style="edgeStyle=none;html=1;exitX=1;exitY=0.37;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.331;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="89" target="41" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.015;entryY=0.846;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="89" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="43" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="906" y="610"/>
+                            <mxPoint x="220" y="610"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="145" value="VPN traffic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="143" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2963" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="149" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.681;entryY=0.042;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="9" target="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="Restarts" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;" vertex="1" connectable="0" parent="149">
+                    <mxGeometry x="-0.4779" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="106" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="31" target="131" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="830" y="24"/>
+                            <mxPoint x="740" y="24"/>
+                            <mxPoint x="740" y="246"/>
+                            <mxPoint x="740" y="493"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" value="Copy server config files" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=-90;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="106" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1326" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-34" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="108" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="32" target="132" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="760" y="75"/>
+                            <mxPoint x="760" y="265"/>
+                            <mxPoint x="760" y="523"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="109" value="Copy stream config files" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=-90;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="108" vertex="1" connectable="0">
+                    <mxGeometry x="-0.3065" relative="1" as="geometry">
+                        <mxPoint y="-33" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="151" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.999;entryY=0.809;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="132" target="89">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="700" y="543"/>
+                            <mxPoint x="700" y="384"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="152" value="Loads stream block" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;" vertex="1" connectable="0" parent="151">
+                    <mxGeometry x="0.8035" relative="1" as="geometry">
+                        <mxPoint x="28" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="154" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1.005;entryY=0.898;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="131" target="89">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="680" y="473"/>
+                            <mxPoint x="680" y="400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="155" value="Loads conf blocks" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;" vertex="1" connectable="0" parent="154">
+                    <mxGeometry x="0.807" y="1" relative="1" as="geometry">
+                        <mxPoint x="32" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
