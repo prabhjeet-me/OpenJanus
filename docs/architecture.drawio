@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="1OtigwTmSooVuUhs4Gp0" name="Page-1">
-        <mxGraphModel dx="1273" dy="1286" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1577" dy="1415" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -76,7 +76,7 @@
                 <mxCell id="20" value="&lt;b&gt;CB_RENEW_PATTERN&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
                     <mxGeometry x="16.33" y="139" width="157.33" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="&lt;b&gt;TEST&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
+                <mxCell id="21" value="&lt;b&gt;CB_TESTING&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
                     <mxGeometry x="16.33" y="190" width="157.33" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="&lt;b&gt;SSL_DH_SIZE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="70" vertex="1">
@@ -100,23 +100,10 @@
                 <mxCell id="25" value="&lt;font style=&quot;color: rgb(178, 102, 255);&quot;&gt;OpenResty (extended Nginx)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="404" y="190" width="206" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="135" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="89" target="95" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="780" y="281"/>
-                            <mxPoint x="780" y="176"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="136" value="Writes DH param file" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="135" vertex="1" connectable="0">
-                    <mxGeometry x="-0.5903" y="1" relative="1" as="geometry">
-                        <mxPoint x="-1" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="89" value="1. Preconfigured security&amp;nbsp;&lt;div&gt;headers (overridable)&lt;div&gt;2. Custom error pages&lt;/div&gt;&lt;div&gt;3. Preconfigured SSL configs&lt;/div&gt;&lt;div&gt;4. DH param security&lt;/div&gt;&lt;div&gt;5. Extends nginx configs &amp;amp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;streams&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#CCCC00,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.37,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="403" y="234" width="190" height="186" as="geometry"/>
                 </mxCell>
-                <mxCell id="90" value="&lt;font style=&quot;color: rgb(204, 204, 0);&quot;&gt;http block&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                <mxCell id="90" value="&lt;font style=&quot;color: light-dark(rgb(204, 204, 0), rgb(179, 255, 102));&quot;&gt;http block&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="411.06" y="220" width="81.94" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#00CC00,#FFFFFF);container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
@@ -128,25 +115,25 @@
                 <mxCell id="28" value="&lt;font style=&quot;color: rgb(0, 204, 0);&quot;&gt;Volumes&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=default;fontStyle=1;fontSize=14;strokeColor=none;fontColor=light-dark(#000000,#FFFFFF);container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
                     <mxGeometry width="71.94" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="&lt;b&gt;/data/letscrypt/conf&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                <mxCell id="29" value="&lt;b&gt;/etc/letsencrypt&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
                     <mxGeometry x="8.269999999999982" y="40" width="157.33" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="&lt;b&gt;/var/lib/openjanus/state&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                <mxCell id="30" value="&lt;b&gt;/var/lib/openjanus/&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
                     <mxGeometry x="8.269999999999982" y="90" width="157.33" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="&lt;b&gt;/etc/openjanus/configs&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                <mxCell id="31" value="&lt;b&gt;/etc/openjanus/conf&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FFFFFF);" parent="97" vertex="1">
                     <mxGeometry x="8.269999999999982" y="139" width="157.33" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="&lt;b&gt;/etc/openjanus/streams&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                <mxCell id="32" value="&lt;b&gt;/etc/openjanus/stream&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FFFFFF);" parent="97" vertex="1">
                     <mxGeometry x="8.269999999999982" y="190" width="157.33" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="94" value="&lt;b&gt;/etc/wireguard&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
                     <mxGeometry x="8.269999999999982" y="240" width="157.33" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="95" value="&lt;b&gt;/etc/ssl/certs/dhparam&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
+                <mxCell id="95" value="&lt;b&gt;/etc/openjanus/ssl&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="97" vertex="1">
                     <mxGeometry x="8.269999999999982" y="291" width="157.33" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="99" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.37;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="6" target="29" edge="1">
+                <mxCell id="99" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.37;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#73F0FF);" parent="1" source="6" target="29" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="740" y="-60"/>
@@ -160,7 +147,7 @@
                         <mxPoint x="33" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="100" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="6" target="30" edge="1">
+                <mxCell id="100" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#A9A8FF);" parent="1" source="6" target="30" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="104" value="Writes .first_run_done" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="100" vertex="1" connectable="0">
@@ -181,13 +168,13 @@
                         <mxPoint y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="111" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.151;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="18" target="6" edge="1">
+                <mxCell id="111" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.151;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF66B3);" parent="1" source="18" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="112" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.433;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="19" target="6" edge="1">
+                <mxCell id="112" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.433;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#3333FF);" parent="1" source="19" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="113" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.379;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="20" target="8" edge="1">
+                <mxCell id="113" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.379;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#52C4FF);" parent="1" source="20" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="310" y="25"/>
@@ -198,7 +185,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="114" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.125;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="19" target="9" edge="1">
+                <mxCell id="114" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.125;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#CC00CC);" parent="1" source="19" target="9" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="320" y="-24"/>
@@ -208,7 +195,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="115" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.581;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="21" target="6" edge="1">
+                <mxCell id="115" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.581;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#70FFAF);" parent="1" source="21" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="340" y="76"/>
@@ -216,7 +203,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="116" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="21" target="8" edge="1">
+                <mxCell id="116" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#70FFAF);" parent="1" source="21" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="350" y="76"/>
@@ -224,21 +211,22 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="117" style="edgeStyle=none;html=1;entryX=0.004;entryY=0.077;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="22" target="89" edge="1">
+                <mxCell id="117" style="edgeStyle=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF8000);" parent="1" source="22" target="95" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="330" y="130"/>
                             <mxPoint x="380" y="130"/>
-                            <mxPoint x="380" y="250"/>
+                            <mxPoint x="380" y="190"/>
+                            <mxPoint x="710" y="190"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="118" value="Generates DH Param" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=90;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="117" vertex="1" connectable="0">
+                <mxCell id="118" value="Generates &amp;amp; writes DH Param file" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];rotation=0;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;fontSize=9;" parent="117" vertex="1" connectable="0">
                     <mxGeometry x="-0.7497" y="-1" relative="1" as="geometry">
-                        <mxPoint x="66" y="60" as="offset"/>
+                        <mxPoint x="266" y="57" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="120" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.858;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="46" target="65" edge="1">
+                <mxCell id="120" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.858;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF3333);" parent="1" source="46" target="65" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="370" y="166"/>
@@ -251,7 +239,7 @@
                         <mxPoint x="2" y="72" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="122" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1.008;entryY=0.786;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="47" target="65" edge="1">
+                <mxCell id="122" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1.008;entryY=0.786;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF8000);" parent="1" source="47" target="65" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="350" y="226"/>
@@ -264,18 +252,23 @@
                         <mxPoint y="27" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="124" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="48" target="65" edge="1">
+                <mxCell id="124" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#99FFFF);" parent="1" source="48" target="65" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="330" y="276"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="126" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.936;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="69" target="65" edge="1">
+                <mxCell id="126" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.936;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF66D0);" parent="1" source="69" target="65" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="316" y="326"/>
                         </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="156" value="Peers to generate for VPN access" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="126">
+                    <mxGeometry x="0.4831" y="-2" relative="1" as="geometry">
+                        <mxPoint x="-74" y="2" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="129" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#FF3333,#FFFFFF);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
@@ -290,7 +283,7 @@
                 <mxCell id="132" value="&lt;b&gt;/etc/nginx/stream.d&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
                     <mxGeometry x="416.33" y="513" width="157.33" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="138" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="65" target="94" edge="1">
+                <mxCell id="138" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF0000);" parent="1" source="65" target="94" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="275" y="600"/>
@@ -301,16 +294,16 @@
                 </mxCell>
                 <mxCell id="139" value="Writes configuration (like peer info)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=1;points=[];movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="138" vertex="1" connectable="0">
                     <mxGeometry x="-0.6059" y="-1" relative="1" as="geometry">
-                        <mxPoint as="offset"/>
+                        <mxPoint y="-2" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="141" style="edgeStyle=none;html=1;exitX=1;exitY=0.37;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.331;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="89" target="41" edge="1">
+                <mxCell id="141" style="edgeStyle=none;html=1;exitX=1;exitY=0.37;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.331;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#3333FF);" parent="1" source="89" target="41" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="142" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.015;entryY=0.846;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="89" target="42" edge="1">
+                <mxCell id="142" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.015;entryY=0.846;entryDx=0;entryDy=0;entryPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#3333FF);" parent="1" source="89" target="42" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="143" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="43" target="65" edge="1">
+                <mxCell id="143" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#CC00CC);" parent="1" source="43" target="65" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="906" y="610"/>
@@ -323,15 +316,17 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="149" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.681;entryY=0.042;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="9" target="25">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="150" value="Restarts" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;" vertex="1" connectable="0" parent="149">
-                    <mxGeometry x="-0.4779" relative="1" as="geometry">
-                        <mxPoint y="1" as="offset"/>
+                <mxCell id="149" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#46FF2B);" parent="1" source="9" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="544" y="191" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="106" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="31" target="131" edge="1">
+                <mxCell id="150" value="Restarts" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;fontSize=8;" parent="149" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4779" relative="1" as="geometry">
+                        <mxPoint y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="106" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF8000);" parent="1" source="31" target="131" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="830" y="24"/>
@@ -346,7 +341,7 @@
                         <mxPoint x="-1" y="-34" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="108" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="32" target="132" edge="1">
+                <mxCell id="108" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#CCCC00);" parent="1" source="32" target="132" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="760" y="75"/>
@@ -360,7 +355,7 @@
                         <mxPoint y="-33" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="151" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.999;entryY=0.809;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="132" target="89">
+                <mxCell id="151" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.999;entryY=0.809;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#CCCC00);" parent="1" source="132" target="89" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="700" y="543"/>
@@ -368,12 +363,12 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="152" value="Loads stream block" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;" vertex="1" connectable="0" parent="151">
+                <mxCell id="152" value="Loads stream block" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;fontSize=9;" parent="151" vertex="1" connectable="0">
                     <mxGeometry x="0.8035" relative="1" as="geometry">
-                        <mxPoint x="28" as="offset"/>
+                        <mxPoint x="18" y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="154" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1.005;entryY=0.898;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" source="131" target="89">
+                <mxCell id="154" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1.005;entryY=0.898;entryDx=0;entryDy=0;entryPerimeter=0;sketch=1;curveFitting=1;jiggle=2;strokeColor=light-dark(#000000,#FF8000);" parent="1" source="131" target="89" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="680" y="473"/>
@@ -381,9 +376,9 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="155" value="Loads conf blocks" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;" vertex="1" connectable="0" parent="154">
+                <mxCell id="155" value="Loads conf blocks" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;fontSize=8;" parent="154" vertex="1" connectable="0">
                     <mxGeometry x="0.807" y="1" relative="1" as="geometry">
-                        <mxPoint x="32" as="offset"/>
+                        <mxPoint x="20" as="offset"/>
                     </mxGeometry>
                 </mxCell>
             </root>
