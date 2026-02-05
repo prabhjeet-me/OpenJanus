@@ -33,6 +33,21 @@ log() {
   local timestamp
   timestamp=$(date '+%Y-%m-%d %H:%M:%S UTC')
 
+  output="[${timestamp}] [${type^^}] <${module}> ${message}"
+
   # Print formatted log line
-  echo -e "${color_code}[${timestamp}] [${type^^}] <${module}> ${message}${RESET}"
+  echo -e "${color_code}$output${RESET}"
+
+  # Create log file path
+  mkdir -p "$LOG_FILE_PATH"
+
+  case "${type,,}" in
+  error|err|fatal) echo -e "${output}" >> "$LOG_FILE_PATH/error-$(date '+%Y-%m-%d').log" ;;
+  warning|warn) echo -e "${output}" >> "$LOG_FILE_PATH/warning-$(date '+%Y-%m-%d').log" ;;
+  info|debug) echo -e "${output}" >> "$LOG_FILE_PATH/info-$(date '+%Y-%m-%d').log" ;;
+  success|ok) echo -e "${output}" >> "$LOG_FILE_PATH/success-$(date '+%Y-%m-%d').log" ;;
+  notice) echo -e "${output}" >> echo -e "${output}" >> "$LOG_FILE_PATH/notice-$(date '+%Y-%m-%d').log" ;;
+  esac
+
+  echo -e "${output}" >> "$LOG_FILE_PATH/all-$(date '+%Y-%m-%d').log"
 }

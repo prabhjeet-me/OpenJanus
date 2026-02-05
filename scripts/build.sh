@@ -11,4 +11,4 @@ log "info" "Build" "Building image v$version"
 # Build image using buildx
 docker buildx build -t openjanus:$version .
 
-log "Success" "Build" "✅ Image v$version build successfully!\n"
+log "success" "Build" "✅ Image v$version build successfully!"
