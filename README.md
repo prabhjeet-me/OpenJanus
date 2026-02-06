@@ -2,6 +2,21 @@
 
 An open-source, containerized infrastructure stack combining OpenResty, automatic SSL, and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead.
 
+![developed by](https://img.shields.io/badge/developed_by-Prabhjeet_Singh-blue)
+[![license](https://img.shields.io/github/license/prabhjeet-me/OpenJanus)](https://github.com/prabhjeet-me/OpenJanus/blob/main/LICENSE)
+![GitHub issues](https://img.shields.io/github/issues/prabhjeet-me/OpenJanus)
+![CI](https://img.shields.io/github/actions/workflow/status/prabhjeet-me/OpenJanus/docker-build.yml)
+![Repo Size](https://img.shields.io/github/repo-size/prabhjeet-me/OpenJanus)
+![GitHub stars](https://img.shields.io/github/stars/prabhjeet-me/OpenJanus)
+![GitHub forks](https://img.shields.io/github/forks/prabhjeet-me/OpenJanus)
+
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/prabhjeetme/openjanus)
+![Docker Image Version](https://img.shields.io/docker/v/prabhjeetme/openjanus)
+![Docker Image Size](https://img.shields.io/docker/image-size/prabhjeetme/openjanus/latest)
+
+[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-View%20Image-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/prabhjeetme/openjanus)
+
 ## Architecture Diagram
 
 The diagram below outlines how the system is structured
@@ -69,16 +84,16 @@ Run `npm run build` to build the docker image.
 
 ## Environment Variables
 
-| Variable Name    | Required | Default        | Description                                                                                                          |
-| :--------------- | :------: | :------------- | :------------------------------------------------------------------------------------------------------------------- |
-| CB_EMAIL         |   True   |                | Email required by certbot for account registration and for contacting in case of any issue.                          |
-| CB_DOMAINs       |   True   |                | Space separated CB_DOMAINs that are needed to be registered **(No wildcards)**                                       |
-| CB_CRON_PATTERN  |  False   | 30 20 \* \* \* | Certbot renewal cronjob to renew due certificates.                                                                   |
-| CB_TESTING       |  False   | 0              | Provide 1 (instead of 0) for test mode. Sets --staging (in case of domain challenge) & --dry-run (in case of renew). |
-| SERVER_PUBLIC_IP |   True   | _blank_        | Server's public IP where container is container is deployed.                                                         |
-| VPN_ENDPOINT     |   True   | _blank_        | VPN Endpoint.                                                                                                        |
-| VPN_PORT         |  False   | 51820          | 51820 default WireGuard port. Change if a different port is mapped on host.                                          |
-| SSL_DH_SIZE      |  False   | 2048           | DH param size. File is generated on first run                                                                        |
+| Variable Name    | Required | Default      | Description                                                                                                          |
+| :--------------- | :------: | :----------- | :------------------------------------------------------------------------------------------------------------------- |
+| CB_EMAIL         |   True   |              | Email required by certbot for account registration and for contacting in case of any issue.                          |
+| CB_DOMAINs       |   True   |              | Space separated CB_DOMAINs that are needed to be registered **(No wildcards)**                                       |
+| CB_CRON_PATTERN  |  False   | 0 0 \* \* \* | Certbot renewal cronjob to renew due certificates.                                                                   |
+| CB_TESTING       |  False   | 0            | Provide 1 (instead of 0) for test mode. Sets --staging (in case of domain challenge) & --dry-run (in case of renew). |
+| SERVER_PUBLIC_IP |   True   | _blank_      | Server's public IP where container is container is deployed.                                                         |
+| VPN_ENDPOINT     |   True   | _blank_      | VPN Endpoint.                                                                                                        |
+| VPN_PORT         |  False   | 51820        | 51820 default WireGuard port. Change if a different port is mapped on host.                                          |
+| SSL_DH_SIZE      |  False   | 2048         | DH param size. File is generated on first run                                                                        |
 
 ## Default Pages
 
@@ -131,3 +146,9 @@ Its space separated domains.
 ### What is the format for WG_PEERS?
 
 Comma separated <DEVICE_NAME>:<PEER_IP>. Ex: `phone:10.13.13.2`. Note that same IP cannot be assigned to multiple users, for next user IP should be `10.13.13.3` and so on.
+
+## Support This Project
+
+If you find this project helpful, consider supporting my work.
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/prabhjeet.me)
