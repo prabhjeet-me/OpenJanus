@@ -1,3 +1,26 @@
+# =========== Stage 1 — Builder ===========
+
+FROM node:24-slim AS builder
+
+RUN apt update && apt install jq -y
+
+WORKDIR /openjanus
+
+# Dependencies
+COPY package*.json ./
+
+RUN npm ci
+
+# Copy source
+COPY . .
+
+ENV LOG_FILE_PATH="./"
+
+# Build pages
+RUN npm run build:pages
+
+# =========== Stage 2 — Runtime ===========
+
 # Base image
 FROM openresty/openresty:1.27.1.2-alpine
 
@@ -52,20 +75,20 @@ ENV SSL_DH_SIZE=2048
 # =================== Copy ===================
 
 # Scripts
-COPY ./container/scripts /etc/openjanus/scripts
-COPY ./scripts/util.sh /etc/openjanus/scripts/util.sh
+COPY --from=builder /openjanus/container/scripts /etc/openjanus/scripts
+COPY --from=builder /openjanus/scripts/util.sh /etc/openjanus/scripts/util.sh
 
 # Configuration presets
-COPY ./container/conf/presets /etc/openjanus/presets
+COPY --from=builder /openjanus/container/conf/presets /etc/openjanus/presets
 
 # Nginx config template
-COPY ./container/conf/nginx.template.conf /usr/local/openresty/nginx/templates/nginx.conf
+COPY --from=builder /openjanus/container/conf/nginx.template.conf /usr/local/openresty/nginx/templates/nginx.conf
 
 # Nginx default server
-COPY ./container/conf/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /openjanus/container/conf/default.conf /etc/nginx/conf.d/default.conf
 
 # Error pages
-COPY ./container/html /usr/local/openresty/nginx/html
+COPY --from=builder /openjanus/container/html /usr/local/openresty/nginx/html
 
 # ================= Commands =================
 
