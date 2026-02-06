@@ -1,13 +1,23 @@
 # Base image
-FROM openresty/openresty:alpine
+FROM openresty/openresty:1.27.1.2-alpine
+
+# =============== Arguments ===============
+
+ARG VERSION
 
 LABEL maintainer="Prabhjeet Singh <dev@prabhjeet.me>"
+LABEL version="${VERSION}"
+LABEL description="An open-source, containerized infrastructure stack combining OpenResty, automatic SSL, and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead."
 
-# Install required packages
-RUN apk add --no-cache certbot openssl wireguard-tools iproute2 openssl bash curl iptables libqrencode-tools \
+# =========== Required Packages ===========
+
+RUN apk add --no-cache certbot openssl wireguard-tools iproute2 openssl bash curl iptables libqrencode-tools gettext \
     && rm -rf /var/cache/apk/*
 
 # ========= Environment Variables =========
+
+# Version
+ENV VERSION=${VERSION}
 
 # Email to register to letsencrypt
 ENV CB_TESTING="0"
@@ -48,8 +58,10 @@ COPY ./scripts/util.sh /etc/openjanus/scripts/util.sh
 # Configuration presets
 COPY ./container/conf/presets /etc/openjanus/presets
 
-# Nginx configs
-COPY ./container/conf/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+# Nginx config template
+COPY ./container/conf/nginx.template.conf /usr/local/openresty/nginx/templates/nginx.conf
+
+# Nginx default server
 COPY ./container/conf/default.conf /etc/nginx/conf.d/default.conf
 
 # Error pages
@@ -59,6 +71,9 @@ COPY ./container/html /usr/local/openresty/nginx/html
 
 # Make scripts executable
 RUN chmod +x /etc/openjanus/scripts/*.sh
+
+# Substitute version in server header
+RUN envsubst '$VERSION' < /usr/local/openresty/nginx/templates/nginx.conf > /usr/local/openresty/nginx/conf/nginx.conf
 
 # For DH param file
 RUN mkdir -p /etc/openjanus/ssl

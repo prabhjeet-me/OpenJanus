@@ -4,6 +4,8 @@ set -euo pipefail
 # Load utility
 source /etc/openjanus/scripts/util.sh
 
+log "info" "OpenJanus" "v$VERSION"
+
 log "info" "EntryPoint" "Configuring WireGuard..."
 
 # Configure WireGuard

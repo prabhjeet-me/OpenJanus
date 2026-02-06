@@ -20,9 +20,9 @@ services:
       - "443:443"
       - "51820:51820/udp"
     volumes:
-      - ./configs/conf:/etc/openjanus/conf:ro
-      - ./configs/stream:/etc/openjanus/stream:ro
-      - ./volumes/letsencrypt:/etc/letsencrypt
-      - ./volumes/openjanus/ssl:/etc/openjanus/ssl
-      - ./volumes/openjanus/var:/var/lib/openjanus
-      - ./volumes/wireguard:/etc/wireguard
+      - ./configs/conf:/etc/openjanus/conf:ro # Nginx config
+      - ./configs/stream:/etc/openjanus/stream:ro # Nginx steam config
+      - ./volumes/letsencrypt:/etc/letsencrypt # SSL certificates
+      - ./volumes/openjanus/ssl:/etc/openjanus/ssl # Stores DH param
+      - ./volumes/openjanus/var:/var/lib/openjanus # Stores run state
+      - ./volumes/wireguard:/etc/wireguard # VPN configs
