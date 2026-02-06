@@ -1,6 +1,6 @@
 {
   "name": "openjanus",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "An open-source, containerized infrastructure stack combining OpenResty, automatic SSL, and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead.",
   "main": "server.js",
   "type": "module",

@@ -1,6 +1,6 @@
 services:
   openjanus:
-    image: openjanus:latest
+    image: prabhjeetme/openjanus:latest
     container_name: openjanus
     restart: always
     cap_add:
