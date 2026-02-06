@@ -15,7 +15,7 @@
     "serve": "concurrently \"npm:eleventy:watch\" \"npm:tailwind:watch\" \"npm:prettier:watch\"",
     "serveStatic": "npm run build:pages && node server.js",
     "build:pages": "eleventy && npx @tailwindcss/cli -m -i ./pages/tailwindcss/input.css -o ./container/html/_assets/css/index.css && prettier --write --ignore-unknown container/html/**/*.html",
-    "build": "npm run build:pages && ./scripts/build.sh"
+    "build": "./scripts/build.sh"
   },
   "keywords": [],
   "author": "",

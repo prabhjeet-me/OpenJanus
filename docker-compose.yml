@@ -1,0 +1,28 @@
+services:
+  openjanus:
+    image: openjanus:latest
+    container_name: openjanus
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - CB_TESTING=0
+      - CB_EMAIL=dev@example.com
+      - CB_DOMAINs=example.com app1.example.com
+      - WG_PEERS=phone:10.13.13.2,tablet:10.13.13.3
+      - VPN_ENDPOINT=vpn.example.com
+      - VPN_PORT=51820
+      - SERVER_PUBLIC_IP=xx.xx.xx.xx
+    ports:
+      - "80:80"
+      - "443:443"
+      - "51820:51820/udp"
+    volumes:
+      - ./configs/conf:/etc/openjanus/conf:ro # Nginx config
+      - ./configs/stream:/etc/openjanus/stream:ro # Nginx steam config
+      - ./volumes/letsencrypt:/etc/letsencrypt # SSL certificates
+      - ./volumes/openjanus/ssl:/etc/openjanus/ssl # Stores DH param
+      - ./volumes/openjanus/var:/var/lib/openjanus # Stores run state
+      - ./volumes/wireguard:/etc/wireguard # VPN configs
