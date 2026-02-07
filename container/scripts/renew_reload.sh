@@ -6,7 +6,7 @@ source /etc/openjanus/scripts/util.sh
 
 log "info" "SSL RENEW" "Renewing certificates..."
 
-if [[ "$CB_TESTING" == "1"]]; then
+if [[ "$CB_TESTING" == "1" ]]; then
   log "warning" "SSL RENEW" "Test Mode: Using certbot's dry-run command & simulating certificate renewal."
 fi
 
