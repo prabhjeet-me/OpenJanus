@@ -81,7 +81,7 @@ else
 fi
 
 # Configure cronjob to run based on defined pattern
-(crontab -l 2>/dev/null; echo "$CB_CRON_PATTERN /etc/openjanus/scripts/renew_reload.sh 2>&1 | tee -a /var/log/cert-renew.log") | crontab -
+(crontab -l 2>/dev/null; echo "$CB_CRON_PATTERN /etc/openjanus/scripts/renew_reload.sh 2>&1 | tee -a /var/log/certbot/renewal.log") | crontab -
 
 # Run cron in foreground and show logs in docker logs
 crond -f -l 8 & # Continue container execution

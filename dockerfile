@@ -66,9 +66,6 @@ ENV VPN_ENDPOINT=
 # VPN port (51820 default WireGuard port. Change if a different port is mapped on host)
 ENV VPN_PORT=51820
 
-# 1 if enable testing mode (--staging on certbot commands)
-ENV TEST=0
-
 # DH param size
 ENV SSL_DH_SIZE=2048
 
@@ -116,10 +113,10 @@ RUN mkdir -p /etc/wireguard
 
 # ================== Volumes ==================
 
-# Open janus directory
+# OpenJanus directory
 VOLUME /etc/openjanus
 
-# Open janus var
+# OpenJanus var
 VOLUME /var/lib/openjanus
 
 # Certificate storage
