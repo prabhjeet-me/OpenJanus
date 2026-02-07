@@ -1,6 +1,6 @@
 {
   "name": "openjanus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An open-source, containerized infrastructure stack combining OpenResty, automatic SSL, and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead.",
   "main": "server.js",
   "type": "module",
@@ -15,7 +15,8 @@
     "serve": "concurrently \"npm:eleventy:watch\" \"npm:tailwind:watch\" \"npm:prettier:watch\"",
     "serveStatic": "npm run build:pages && node server.js",
     "build:pages": "eleventy && npx @tailwindcss/cli -m -i ./pages/tailwindcss/input.css -o ./container/html/_assets/css/index.css && prettier --write --ignore-unknown container/html/**/*.html",
-    "build": "./scripts/build.sh"
+    "build": "./scripts/build.sh",
+    "export": "./scripts/export.sh"
   },
   "keywords": [],
   "author": "",
