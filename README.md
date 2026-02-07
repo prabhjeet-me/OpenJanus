@@ -1,6 +1,6 @@
-# OpenJanus
+# OpenJanus - All in One Nginx Server
 
-An open-source, containerized infrastructure stack combining OpenResty, automatic SSL, and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead.
+An open-source, containerized infrastructure stack combining OpenResty, automatic SSL (registration & renewal), and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead.
 
 ![developed by](https://img.shields.io/badge/developed_by-Prabhjeet_Singh-blue)
 [![license](https://img.shields.io/github/license/prabhjeet-me/OpenJanus)](https://github.com/prabhjeet-me/OpenJanus/blob/main/LICENSE)
@@ -17,33 +17,123 @@ An open-source, containerized infrastructure stack combining OpenResty, automati
 
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-View%20Image-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/prabhjeetme/openjanus)
 
-## Architecture Diagram
+## Support This Project
 
-The diagram below outlines how the system is structured
+If you find this project helpful, consider supporting my work.
 
-![Architecture Diagram](./docs/architecture.svg)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/prabhjeet.me)
 
-## Prerequisites
+## Key Capabilities
+
+- **Automatic SSL**: Registration & renewal using certbot (acme-challenge)
+- **Automatic VPN**: WireGuard to register peers & route traffic to containers with VPN private IP.
+- **OpenResty**: Provides additional functionality over Nginx.
+- **Nginx**: All functionalities provided by Nginx.
+
+## Version Compatibility
+
+| OpenJanus Version | OpenResty Version | WireGuard    | Certbot |
+| :---------------- | :---------------- | :----------- | :------ |
+| 1.0.0-alpine      | 1.27.1.2-alpine   | 1.0.20250521 | 4.0.0   |
+
+## Builtin Features
+
+1. Preconfigured security headers in http block. These headers will be inherited in all of the _server_ blocks. If any application requires a different value for any header, it can be overwritten in server block of itself. See Overwrite header in this [example](/examples/overwrite_headers.example.conf)
+2. Default error pages. Container comes with predefined error pages for 30x, 40x & 50x. Error pages can be overridden in [html](/html/) directory.
+3. Best possible SSL & DHparam Nginx configurations (see [nginx.conf](./container/conf/nginx.template.conf)).
+
+## Examples
+
+1. Serving custom _50x_ page: Configuration to serve custom 50x page [here](/examples/50x.example.conf).
+2. Serving custom _403_ page: Configuration to serve custom 403 page [here](/examples/403.example.conf).
+3. One line configuration to do above 2 & override all error pages [here](/examples/common_conf.example.conf).
+4. Override default headers: [This](/examples/overwrite_headers.example.conf) shows how to override default headers.
+5. Setting SSL: SSL setup is demonstrated in [this](/examples/ssl.example.conf) example.
+6. Stream TCP connection: To stream TCP connection, [this example](/examples/stream.example.conf) should be helpful (make sure stream port is mapped to host machine).
+
+## Docker Compose
+
+```yml
+services:
+  openjanus:
+    image: prabhjeetme/openjanus:latest
+    container_name: openjanus
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - CB_TESTING=0
+      - CB_EMAIL=dev@example.com
+      - CB_DOMAINs=example.com app1.example.com
+      - WG_PEERS=phone:10.13.13.2,tablet:10.13.13.3
+      - VPN_ENDPOINT=vpn.example.com
+      - VPN_PORT=51820
+      - SERVER_PUBLIC_IP=xx.xx.xx.xx
+    ports:
+      - "80:80"
+      - "443:443"
+      - "51820:51820/udp"
+    volumes:
+      - ./configs/conf:/etc/openjanus/conf:ro # Nginx config
+      - ./configs/stream:/etc/openjanus/stream:ro # Nginx steam config
+      - ./volumes/letsencrypt:/etc/letsencrypt # SSL certificates
+      - ./volumes/openjanus/ssl:/etc/openjanus/ssl # Stores DH param
+      - ./volumes/openjanus/var:/var/lib/openjanus # Stores run state
+      - ./volumes/wireguard:/etc/wireguard # VPN configs
+```
+
+### Environment Variables
+
+| Variable Name    | Required | Default             | Description                                                                                                          |
+| :--------------- | :------: | :------------------ | :------------------------------------------------------------------------------------------------------------------- |
+| VERSION          |  False   | [OpenJanus version] | OpenJanus version.                                                                                                   |
+| CB_EMAIL         |   True   |                     | Email required by certbot for account registration and for contacting in case of any issue.                          |
+| CB_DOMAINs       |   True   |                     | Space separated CB_DOMAINs that are needed to be registered **(No wildcards)**                                       |
+| CB_CRON_PATTERN  |  False   | 0 0 \* \* \*        | Certbot renewal cronjob to renew due certificates.                                                                   |
+| CB_TESTING       |  False   | 0                   | Provide 1 (instead of 0) for test mode. Sets --staging (in case of domain challenge) & --dry-run (in case of renew). |
+| SERVER_PUBLIC_IP |   True   | _blank_             | Server's public IP where container is container is deployed.                                                         |
+| VPN_ENDPOINT     |   True   | _blank_             | VPN Endpoint.                                                                                                        |
+| VPN_PORT         |  False   | 51820               | 51820 default WireGuard port. Change if a different port is mapped on host.                                          |
+| SSL_DH_SIZE      |  False   | 2048                | DH param size. File is generated on first run                                                                        |
+
+### Volumes
+
+| Container Path        | Type | Description                                           | Example                                   |
+| :-------------------- | :--: | :---------------------------------------------------- | :---------------------------------------- |
+| /etc/openjanus/conf   |  ro  | Nginx configurations (files containing server blocks) | Reverse proxy configuration               |
+| /etc/openjanus/stream |  ro  | Nginx configurations (files containing server blocks) | Stream TCP connection to your application |
+| /etc/letsencrypt      |  rw  | Stores SSL certificates                               | Your domain's SSL certificates            |
+| /etc/openjanus/ssl    |  rw  | Stores DH param file                                  | -                                         |
+| /var/lib/openjanus    |  rw  | Stores OpenJanus run state (to detect first run)      | .first_run_done                           |
+| /etc/wireguard        |  rw  | Stores VPN configuration                              | Peers etc                                 |
+
+### Ports
+
+| Host  | Container | Description    |
+| :---- | :-------: | :------------- |
+| 80    |    80     | HTTP port      |
+| 443   |    443    | HTTPs port     |
+| 51820 | 51820/udp | WireGuard Port |
+
+### Deployment
+
+1. Use [docker-compose.yml](#docker-compose) as the base template.
+2. Update [environment variables](#environment-variables) for your site.
+3. It is necessary to mount directories (mentioned in [docker-compose.yml](#docker-compose)) for persistence.
+4. Put your nginx configs in _conf_ & _stream_ directory.
+5. Make sure you have created records for all DNS mentioned in _CB_DOMAINs_ & _VPN_ENDPOINT_ (and are propagated).
+6. Make sure VPN_PORT is allowed on firewall.
+7. Run the container using `docker compose up -d`.
+
+## Development
+
+### Prerequisites
 
 Install required softwares ([Docker](https://www.docker.com/get-started/) & [Visual Studio Code](https://code.visualstudio.com/)). This will allow one click setup & dockerize development. After installation open this project in devcontainer.
 
-## Terminology
-
-1. DH: Diffie-Hellman
-
-## Commands
-
-| Command                  | Description                                                                     |
-| :----------------------- | :------------------------------------------------------------------------------ |
-| \* `npm run serve`       | Combines functionality of above. Run this if updating HTML, CSS content (watch) |
-| \* `npm run build`       | Build image                                                                     |
-| `npm run tailwind:watch` | Generate tailwind classes (watch)                                               |
-| `npm run eleventy:watch` | Generate HTML from templates (watch)                                            |
-| `npm run prettier:watch` | Format code (watch)                                                             |
-| `npm run serveStatic`    | Serve generated HTML pages                                                      |
-| `npm run build:pages`    | Build HTML, CSS content                                                         |
-
-## Project Structure
+### Project Structure
 
 | Directory                | Description                         |
 | :----------------------- | :---------------------------------- |
@@ -53,47 +143,22 @@ Install required softwares ([Docker](https://www.docker.com/get-started/) & [Vis
 | [/scripts](/scripts)     | Scripts (like build)                |
 | [/examples](/examples)   | Configuration examples              |
 
-## Build
+### Commands
 
-Run `npm run build` to build the docker image.
+| Command                  | Description                                                                            |
+| :----------------------- | :------------------------------------------------------------------------------------- |
+| \* `npm run serve`       | Combines tailwind, eleventy & prettier. Run this if updating HTML, CSS content (watch) |
+| \* `npm run build`       | Build image                                                                            |
+| `npm run tailwind:watch` | Generate tailwind classes (watch)                                                      |
+| `npm run eleventy:watch` | Generate HTML from templates (watch)                                                   |
+| `npm run prettier:watch` | Format code (watch)                                                                    |
+| `npm run serveStatic`    | Serve generated HTML pages                                                             |
+| `npm run build:pages`    | Build HTML, CSS content                                                                |
 
-## Production Deployment
+### Scripts
 
-1. Use [docker-compose.yml](./docker-compose.yml) as the base template.
-2. Update [environment variables](#environment-variables) for your site.
-3. It is necessary to mount directories (mentioned in [docker-compose.yml](./docker-compose.yml)) for persistence.
-4. Put your nginx configs in _conf_ & _stream_ directory.
-5. Make sure you have created records for all DNS mentioned in _CB_DOMAINs_ & _VPN_ENDPOINT_.
-6. Make sure VPN_PORT is allowed on firewall.
-7. Run the container using `docker compose up -d`.
-
-## Builtin Features
-
-1. Preconfigured security headers in http block. These headers will be inherited in all of the _server_ blocks. If any application requires a different value for any header, it can be overwritten in server block of itself. See Overwrite header in this [example](/examples/overwrite_headers.example.conf)
-2. Default error pages. Container comes with predefined error pages for 404 & 50x. Error pages can be overridden in [html](/html/) directory. If any server block needs to show overridden 50x page it has to add `location /50x.html{}` in server block (see [example](/examples/50x.example.conf)), otherwise the default OpenResty/Nginx 50x page will be served.
-3. Best possible ssl & dhparam Nginx configurations (see [nginx.conf](/conf/nginx.conf)).
-
-## Examples
-
-1. Serving custom _50x_ page: Configuration to serve custom 50x page [here](/examples/50x.example.conf).
-2. Serving custom _403_ page: Configuration to serve custom 403 page [here](/examples/403.example.conf).
-3. One line configuration to do above 2 [here](/examples/common_conf.example.conf).
-4. Override default headers: [This](/examples/overwrite_headers.example.conf) shows how to override default headers.
-5. Setting SSL: SSL setup is demonstrated in [this](/examples/ssl.example.conf) example.
-6. Stream TCP connection: To stream TCP connection, [this example](/examples/stream.example.conf) should be helpful (make sure stream port is mapped to host machine).
-
-## Environment Variables
-
-| Variable Name    | Required | Default      | Description                                                                                                          |
-| :--------------- | :------: | :----------- | :------------------------------------------------------------------------------------------------------------------- |
-| CB_EMAIL         |   True   |              | Email required by certbot for account registration and for contacting in case of any issue.                          |
-| CB_DOMAINs       |   True   |              | Space separated CB_DOMAINs that are needed to be registered **(No wildcards)**                                       |
-| CB_CRON_PATTERN  |  False   | 0 0 \* \* \* | Certbot renewal cronjob to renew due certificates.                                                                   |
-| CB_TESTING       |  False   | 0            | Provide 1 (instead of 0) for test mode. Sets --staging (in case of domain challenge) & --dry-run (in case of renew). |
-| SERVER_PUBLIC_IP |   True   | _blank_      | Server's public IP where container is container is deployed.                                                         |
-| VPN_ENDPOINT     |   True   | _blank_      | VPN Endpoint.                                                                                                        |
-| VPN_PORT         |  False   | 51820        | 51820 default WireGuard port. Change if a different port is mapped on host.                                          |
-| SSL_DH_SIZE      |  False   | 2048         | DH param size. File is generated on first run                                                                        |
+1. Run `./scripts/build.sh` to build the docker image (or `npm run build` if inside devcontainer).
+2. Run `./scripts/publish.sh` to publish image to docker hub.
 
 ## Default Pages
 
@@ -103,21 +168,19 @@ Default pages like 50x, 403 & 404 is already configured to override with pages i
 
 For SSL analysis use [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html).
 
-## OpenResty - OpenJanus
-
-| OpenResty Version | OpenJanus Version |
-| :---------------- | :---------------- |
-| 1.27.1.2-alpine   | 1.0.0-alpine      |
-
 ## Don'ts
 
 1. Never mount a file named _default.conf_. This will replace internal _default.conf_ file. If overwrite is required, include [this file](/container/conf/default.conf) logic in your _default.conf_ file.
 
 ## Frequently Asked Questions (FAQs)
 
+### Default OpenResty error pages are displayed?
+
+If any server block needs to show overridden 30x, 40x & 50x page it has to add `location /50x.html{}` (and similar) in server block (see [example](/examples/common_conf.example.conf)), otherwise the default OpenResty/Nginx 50x page will be served.
+
 ### Why I see a file named _.first_run_done_?
 
-Open Janus creates this file as a flag to know if the container is being initially setup or is a subsequent run.
+OpenJanus creates this file as a flag to know if the container is being initially setup or is a subsequent run.
 
 ### I already have a domain (example.com) registered, I want to register a new domain (api.example.com). How should I do it?
 
@@ -125,7 +188,7 @@ From container's mounted volume remove file named _.first_run_done_ and restart 
 
 ### My application (say example server) is running (I'm able to ping the server inside container), but Nginx logs shows _Connection refused_ (or similar). What to do?
 
-This situation generally comes when you run/restart the application container while Open Janus is still running (obviously). To fix this just run `nginx -s reload` command inside Open Janus container.
+This situation generally comes when you run/restart the application container while OpenJanus is still running (obviously). To fix this just run `nginx -s reload` command inside OpenJanus container.
 
 ### I want to override default headers. How to do that?
 
@@ -147,8 +210,8 @@ Its space separated domains.
 
 Comma separated <DEVICE_NAME>:<PEER_IP>. Ex: `phone:10.13.13.2`. Note that same IP cannot be assigned to multiple users, for next user IP should be `10.13.13.3` and so on.
 
-## Support This Project
+## Architecture Diagram
 
-If you find this project helpful, consider supporting my work.
+The diagram below outlines how the system is structured
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/prabhjeet.me)
+![Architecture Diagram](./docs/architecture.svg)
