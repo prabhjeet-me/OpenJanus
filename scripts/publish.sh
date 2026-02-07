@@ -4,6 +4,8 @@ set -euo pipefail
 # Load utility
 source ./scripts/util.sh
 
+version=$(jq -r '.version' package.json)
+
 log "info" "Publish" "Publishing image v$version"
 
 # Push
