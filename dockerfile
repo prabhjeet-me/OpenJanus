@@ -111,6 +111,9 @@ RUN mkdir -p /etc/nginx/stream.d
 # Wireguard
 RUN mkdir -p /etc/wireguard
 
+# Certbot logs (cronjob)
+RUN mkdir -p /var/log/certbot
+
 # ================== Volumes ==================
 
 # OpenJanus directory
