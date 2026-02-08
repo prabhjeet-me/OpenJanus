@@ -1,0 +1,8 @@
+node_modules
+.git
+output
+logs
+docs
+examples
+.github
+.devcontainer
