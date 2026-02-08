@@ -32,9 +32,9 @@ If you find this project helpful, consider supporting my work.
 
 ## Version Compatibility
 
-| OpenJanus Version | OpenResty Version | WireGuard    | Certbot |
-| :---------------- | :---------------- | :----------- | :------ |
-| 1.0.0-alpine      | 1.27.1.2-alpine   | 1.0.20250521 | 4.0.0   |
+| OpenJanus          | OpenResty       | WireGuard    | Certbot |
+| :----------------- | :-------------- | :----------- | :------ |
+| 1.0.(0,1,2)-alpine | 1.27.1.2-alpine | 1.0.20250521 | 4.0.0   |
 
 ## Builtin Features
 
