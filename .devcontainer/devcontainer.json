@@ -32,8 +32,21 @@
         "DavidAnson.vscode-markdownlint",
         "pkief.material-icon-theme",
         "hediet.vscode-drawio",
-        "ginfuru.better-nunjucks"
-      ]
+        "ginfuru.better-nunjucks",
+        "github.vscode-github-actions"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.editorAssociations": {
+          "*.md": "vscode.markdown.preview.editor"
+        },
+        "explorer.compactFolders": false,
+        "hediet.vscode-drawio.appearance": "automatic",
+        "css.customData": [".vscode/tailwind.json"]
+      }
     }
   },
 

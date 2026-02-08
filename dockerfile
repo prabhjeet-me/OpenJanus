@@ -1,8 +1,28 @@
-# =========== Stage 1 — Builder ===========
+############################## Global Arguments ##############################
 
-FROM node:24-slim AS builder
+ARG NODE_VERSION=24-slim
 
-RUN apt update && apt install jq -y
+ARG OPENJANUS_VERSION
+ARG OPENRESTY_VERSION
+ARG CERTBOT_VERSION
+ARG WIREGUARD_VERSION
+
+###############################################################################
+# Stage 1 - Builder
+###############################################################################
+
+FROM node:${NODE_VERSION} AS builder
+
+ARG OPENJANUS_VERSION
+ARG OPENRESTY_VERSION
+ARG CERTBOT_VERSION
+ARG WIREGUARD_VERSION
+
+# Test if required arguments are provided
+RUN test -n "$OPENJANUS_VERSION" || (echo "OPENJANUS_VERSION is required" && exit 1)
+RUN test -n "$OPENRESTY_VERSION" || (echo "OPENRESTY_VERSION is required" && exit 1)
+RUN test -n "$CERTBOT_VERSION" || (echo "CERTBOT_VERSION is required" && exit 1)
+RUN test -n "$WIREGUARD_VERSION" || (echo "WIREGUARD_VERSION is required" && exit 1)
 
 WORKDIR /openjanus
 
@@ -19,28 +39,24 @@ ENV LOG_FILE_PATH="./"
 # Build pages
 RUN npm run build:pages
 
-# =========== Stage 2 — Runtime ===========
+# #############################################################################
+# # Stage 2 - Runtime
+# #############################################################################
 
-# Base image
-FROM openresty/openresty:1.27.1.2-alpine
+FROM openresty/openresty:${OPENRESTY_VERSION}
 
-# =============== Arguments ===============
-
-ARG VERSION
+ARG OPENJANUS_VERSION
+ARG CERTBOT_VERSION
+ARG WIREGUARD_VERSION
 
 LABEL maintainer="Prabhjeet Singh <dev@prabhjeet.me>"
-LABEL version="${VERSION}"
+LABEL version="${OPENJANUS_VERSION}"
 LABEL description="An open-source, containerized infrastructure stack combining OpenResty, automatic SSL, and a built-in WireGuard VPN to securely expose public and private endpoints with minimal configuration and operational overhead."
 
-# =========== Required Packages ===========
-
-RUN apk add --no-cache certbot openssl wireguard-tools iproute2 openssl bash curl iptables libqrencode-tools gettext \
-    && rm -rf /var/cache/apk/*
-
-# ========= Environment Variables =========
+############################ Environment Variables ############################
 
 # Version
-ENV VERSION=${VERSION}
+ENV OPENJANUS_VERSION=${OPENJANUS_VERSION}
 
 # Email to register to letsencrypt
 ENV CB_TESTING="0"
@@ -69,7 +85,16 @@ ENV VPN_PORT=51820
 # DH param size
 ENV SSL_DH_SIZE=2048
 
-# =================== Copy ===================
+################################## Packages ###################################
+
+RUN apk add --no-cache \
+  certbot=$CERTBOT_VERSION \
+  wireguard-tools=$WIREGUARD_VERSION \
+  openssl iproute2 openssl bash curl iptables libqrencode-tools gettext \
+    && rm -rf /var/cache/apk/*
+
+#################################### Copy #####################################
+
 
 # Scripts
 COPY --from=builder /openjanus/container/scripts /etc/openjanus/scripts
@@ -87,13 +112,13 @@ COPY --from=builder /openjanus/container/conf/default.conf /etc/nginx/conf.d/def
 # Error pages
 COPY --from=builder /openjanus/container/html /usr/local/openresty/nginx/html
 
-# ================= Commands =================
+################################## Commands ##################################
 
 # Make scripts executable
 RUN chmod +x /etc/openjanus/scripts/*.sh
 
 # Substitute version in server header
-RUN envsubst '$VERSION' < /usr/local/openresty/nginx/templates/nginx.conf > /usr/local/openresty/nginx/conf/nginx.conf
+RUN envsubst '$OPENJANUS_VERSION' < /usr/local/openresty/nginx/templates/nginx.conf > /usr/local/openresty/nginx/conf/nginx.conf
 
 # For DH param file
 RUN mkdir -p /etc/openjanus/ssl
@@ -114,7 +139,7 @@ RUN mkdir -p /etc/wireguard
 # Certbot logs (cronjob)
 RUN mkdir -p /var/log/certbot
 
-# ================== Volumes ==================
+################################### Volumes ###################################
 
 # OpenJanus directory
 VOLUME /etc/openjanus
@@ -128,7 +153,8 @@ VOLUME /etc/letsencrypt
 # Wireguard
 VOLUME /etc/wireguard
 
-# =================== Ports ===================
+#################################### Ports ####################################
+
 
 # Expose HTTP, HTTPS & WireGuard VPN port
 EXPOSE 80 443 51820/udp
