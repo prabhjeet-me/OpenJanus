@@ -135,13 +135,14 @@ Install required softwares ([Docker](https://www.docker.com/get-started/) & [Vis
 
 ### Project Structure
 
-| Directory                | Description                         |
-| :----------------------- | :---------------------------------- |
-| [/container](/container) | Files to be bundled build container |
-| [/docs](/docs)           | Documents (like architecture)       |
-| [/pages](/pages)         | Nunjucks pages for error pages      |
-| [/scripts](/scripts)     | Scripts (like build)                |
-| [/examples](/examples)   | Configuration examples              |
+| Directory                               | Description                               |
+| :-------------------------------------- | :---------------------------------------- |
+| [/container](/container)                | Files to be bundled build container       |
+| [/docs](/docs)                          | Documents (like architecture)             |
+| [/pages](/pages)                        | Nunjucks pages for error pages            |
+| [/scripts](/scripts)                    | Scripts (like build)                      |
+| [/examples](/examples)                  | Configuration examples                    |
+| [dependencies.json](/dependencies.json) | Dependencies for image is maintained here |
 
 ### Commands
 

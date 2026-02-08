@@ -1,0 +1,6 @@
+{
+  "NODE_VERSION": "24-slim",
+  "OPENRESTY_VERSION": "1.27.1.2-alpine",
+  "CERTBOT_VERSION": "4.0.0-r0",
+  "WIREGUARD_VERSION": "1.0.20250521-r0"
+}
