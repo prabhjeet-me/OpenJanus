@@ -165,10 +165,6 @@ Install required softwares ([Docker](https://www.docker.com/get-started/) & [Vis
 
 Default pages like 50x, 403 & 404 is already configured to override with pages in [/container/html](/container/html/) directory (see [nginx.conf](/container/conf/nginx.conf)). Server block needs to include common.conf to actually override the content (See [Example no. 3](#examples)).
 
-## SSL Analysis
-
-For SSL analysis use [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html).
-
 ## Don'ts
 
 1. Never mount a file named _default.conf_. This will replace internal _default.conf_ file. If overwrite is required, include [this file](/container/conf/default.conf) logic in your _default.conf_ file.
@@ -210,6 +206,12 @@ Its space separated domains.
 ### What is the format for WG_PEERS?
 
 Comma separated <DEVICE_NAME>:<PEER_IP>. Ex: `phone:10.13.13.2`. Note that same IP cannot be assigned to multiple users, for next user IP should be `10.13.13.3` and so on.
+
+## SSL Analysis
+
+For SSL analysis use [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html). Below is the overall rating OpenJanus provides out of the box.
+
+![SSL Report](./docs/SSL_Labs_Report.png)
 
 ## Architecture Diagram
 
