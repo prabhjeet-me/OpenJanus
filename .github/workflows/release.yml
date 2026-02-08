@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: 24
 
+      - name: Install dependencies
+        run: npm ci
+
       # Run semantic-release (version bump + changelog + GitHub release)
       - name: Run semantic-release
         run: npx semantic-release
