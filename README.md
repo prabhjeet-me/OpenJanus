@@ -5,7 +5,7 @@ An open-source, containerized infrastructure stack combining OpenResty, automati
 ![developed by](https://img.shields.io/badge/developed_by-Prabhjeet_Singh-blue)
 [![license](https://img.shields.io/github/license/prabhjeet-me/OpenJanus)](https://github.com/prabhjeet-me/OpenJanus/blob/main/LICENSE)
 ![GitHub issues](https://img.shields.io/github/issues/prabhjeet-me/OpenJanus)
-![CI](https://img.shields.io/github/actions/workflow/status/prabhjeet-me/OpenJanus/docker-build.yml)
+![release](https://img.shields.io/github/actions/workflow/status/prabhjeet-me/OpenJanus/docker.yml)
 ![Repo Size](https://img.shields.io/github/repo-size/prabhjeet-me/OpenJanus)
 ![GitHub stars](https://img.shields.io/github/stars/prabhjeet-me/OpenJanus)
 ![GitHub forks](https://img.shields.io/github/forks/prabhjeet-me/OpenJanus)
