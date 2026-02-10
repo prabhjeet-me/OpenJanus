@@ -4,7 +4,13 @@ set -euo pipefail
 # Load utility
 source ./scripts/util.sh
 
-version=$(node -p "require('./package.json').version")
+# Get version from tag in CI environment
+if [ "${GITHUB_ACTIONS:-}" = "true" ]; then
+  version="$TAG_VERSION"
+else
+  version=$(node -p "require('./package.json').version")
+fi
+
 node_version=$(node -p "require('./dependencies.json').NODE_VERSION")
 openresty_version=$(node -p "require('./dependencies.json').OPENRESTY_VERSION")
 certbot_version=$(node -p "require('./dependencies.json').CERTBOT_VERSION")
