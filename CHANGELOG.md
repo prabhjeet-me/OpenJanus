@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/prabhjeet-me/OpenJanus/compare/v1.0.1...v1.1.0) (2026-03-21)
+
+
+### Features
+
+* openresty 1.27.1.2 -&gt; 1.29.2.1 ([e35e048](https://github.com/prabhjeet-me/OpenJanus/commit/e35e048a1829260b877d059e18e64ca992d9d304))
+
 ## [1.0.1](https://github.com/prabhjeet-me/OpenJanus/compare/v1.0.0...v1.0.1) (2026-02-10)
 
 
