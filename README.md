@@ -5,7 +5,7 @@ An open-source, containerized infrastructure stack combining OpenResty, automati
 ![developed by](https://img.shields.io/badge/developed_by-Prabhjeet_Singh-blue)
 [![license](https://img.shields.io/github/license/prabhjeet-me/OpenJanus)](https://github.com/prabhjeet-me/OpenJanus/blob/main/LICENSE)
 ![GitHub issues](https://img.shields.io/github/issues/prabhjeet-me/OpenJanus)
-![release](https://img.shields.io/github/actions/workflow/status/prabhjeet-me/OpenJanus/docker.yml)
+![release](https://github.com/prabhjeet-me/OpenJanus/actions/workflows/docker.yml/badge.svg?event=push)
 ![Repo Size](https://img.shields.io/github/repo-size/prabhjeet-me/OpenJanus)
 ![GitHub stars](https://img.shields.io/github/stars/prabhjeet-me/OpenJanus)
 ![GitHub forks](https://img.shields.io/github/forks/prabhjeet-me/OpenJanus)
@@ -32,9 +32,10 @@ If you find this project helpful, consider supporting my work.
 
 ## Version Compatibility
 
-| OpenJanus          | OpenResty       | WireGuard    | Certbot |
-| :----------------- | :-------------- | :----------- | :------ |
-| 1.0.(0,1,2)-alpine | 1.27.1.2-alpine | 1.0.20250521 | 4.0.0   |
+| OpenJanus        | OpenResty       | WireGuard    | Certbot |
+| :--------------- | :-------------- | :----------- | :------ |
+| 1.0.(0,1)-alpine | 1.27.1.2-alpine | 1.0.20250521 | 4.0.0   |
+| 1.1.0-alpine     | 1.29.2.1-alpine | 1.0.20250521 | 4.0.0   |
 
 ## Builtin Features
 
